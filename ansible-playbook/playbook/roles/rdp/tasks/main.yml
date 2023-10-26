@@ -1,0 +1,17 @@
+- name: Install RDP Services
+  win_feature: >
+    name=RDS-Licensing,RDS-RD-Server
+    include_management_tools=yes
+    include_sub_features=yes
+    state=present
+  register: res
+
+- name: Reboot
+  win_reboot:
+  when: res.reboot_required
+  
+- name: Configure RDP Policy
+  win_user_right:
+    name: SeRemoteInteractiveLogonRight
+    users: BUILTIN\Remote Desktop Users
+    action: add

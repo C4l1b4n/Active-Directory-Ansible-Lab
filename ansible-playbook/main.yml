@@ -1,0 +1,19 @@
+---
+
+# Manage default configurations for all the VMs
+- import_playbook: playbook/common-setup.yml
+
+# Install AD environment in target VMs
+- import_playbook: playbook/ad-setup.yml
+
+# Build Forests and Join Domains (if presents)
+- import_playbook: playbook/ad-build.yml
+
+# Install Extra Features
+- import_playbook: playbook/extras.yml
+
+# Import a Scenario:
+#- import_playbook: playbook/modules/scenario1.yml
+
+# Shutdown all the VMs
+- import_playbook: playbook/shutdown.yml

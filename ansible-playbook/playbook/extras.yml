@@ -1,0 +1,6 @@
+---
+- name: Install and Configure RDP
+  hosts: RDP
+  roles:
+    - role: roles/rdp
+  

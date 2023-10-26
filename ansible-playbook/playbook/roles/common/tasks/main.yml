@@ -1,0 +1,8 @@
+- name: Change hostnames
+  win_hostname:
+   name: "{{ vars[inventory_hostname].hostname }}"
+  register: res
+    
+- name: Reboot
+  win_reboot:
+  when: res.reboot_required

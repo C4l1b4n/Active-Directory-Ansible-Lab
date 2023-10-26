@@ -1,0 +1,22 @@
+- name: Set internal DNS server
+  win_dns_client:
+    adapter_names: '*'
+    ipv4_addresses:
+      - '127.0.0.1'
+
+- name: Create Forest
+  win_domain:
+    database_path="{{vars[inventory_hostname].database_path}}"
+    dns_domain_name="{{vars[inventory_hostname].forest_domain}}"
+    domain_netbios_name="{{vars[inventory_hostname].domain_netbios_name}}"
+    log_path="{{vars[inventory_hostname].log_path}}"
+    safe_mode_password="{{vars[inventory_hostname].safe_mode_password}}"
+    sysvol_path="{{vars[inventory_hostname].sysvol_path}}"
+  register: res
+
+- name: reboot server
+  win_reboot:
+    pre_reboot_delay: 30
+  when: res.changed
+  
+  

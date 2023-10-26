@@ -1,0 +1,39 @@
+---
+- name: Import Scenario 1
+  hosts: dc02
+  vars_files:
+    - ../vars/vars.yml
+  tasks:
+
+    - name: Copy configuration script
+      win_copy:
+        src: ../scripts/scenario1.ps1
+        dest: C:\Users\Administrator\Desktop\scenario1.ps1  
+       
+    - name: Run configuration script
+      ansible.windows.win_powershell:
+        script: |
+          [CmdletBinding()]
+          param (
+            [String]
+            $ChildDomain,
+            [String]
+            $FirstName,
+            [String]
+            $LastName,
+            [String]
+            $Password
+          )
+          C:\Users\Administrator\Desktop\scenario1.ps1 -DomainName $ChildDomain -FirstName $FirstName -LastName $LastName -Password $Password
+        parameters:
+          ChildDomain: "{{vars[inventory_hostname].subdomain}}.{{vars[vars[inventory_hostname].parent_host].forest_domain}}"
+          FirstName: "{{vars[inventory_hostname].firstname}}"
+          LastName: "{{vars[inventory_hostname].lastname}}"
+          Password: "{{vars[inventory_hostname].password}}"
+        
+    - name: Remove configuration script
+      win_file:
+        path: C:\Users\Administrator\Desktop\scenario1.ps1
+        state: absent  
+      
+      

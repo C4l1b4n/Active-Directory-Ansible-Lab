@@ -1,0 +1,9 @@
+---
+- name: Reboot VMs
+  hosts: all
+  tasks:
+
+    - name: Shutdown
+      win_shell: 'shutdown /r /t 10 /f'
+    
+  

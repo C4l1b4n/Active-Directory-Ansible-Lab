@@ -1,0 +1,65 @@
+- name: Set internal DNS server 
+  win_dns_client:
+    adapter_names: '*'
+    ipv4_addresses:
+      - "{{vars[inventory_hostname].parent_private_address}}"
+      
+- name: Join Child to Forest
+  ansible.windows.win_powershell:
+    script: |
+      [CmdletBinding()]
+      param (
+         [String]
+         $Password,
+         [String]
+         $DomainAdmin,
+         [String]
+         $SafeModeAdministratorPassword,
+         [String]
+         $NewDomainName,
+         [String]
+         $NewDomainNetbiosName,
+         [String]
+         $ParentDomainName,
+         [String]
+         $DatabasePath,
+         [String]
+         $SysvolPath,
+         [String]
+         $LogPath,
+         [String]
+         $ReplicationSourceDC
+      )
+      $Ansible.Changed=$true
+      $pass = ConvertTo-SecureString $Password -AsPlainText -Force
+      $cred = New-Object System.Management.Automation.PSCredential ($DomainAdmin, $pass)
+      $safePassword = ConvertTo-SecureString $SafeModeAdministratorPassword -AsPlainText -Force
+      Install-ADDSDomain -Credential $cred -SkipPreChecks -NewDomainName $NewDomainName -NewDomainNetbiosName $NewDomainNetbiosName -ParentDomainName $ParentDomainName -DatabasePath $DatabasePath -SYSVOLPath $SysvolPath -LogPath $LogPath -SafeModeAdministratorPassword $safePassword -Force -ReplicationSourceDC $ReplicationSourceDC
+    parameters:
+      Password: "{{hostvars[vars[inventory_hostname].parent_host].ansible_password}}"
+      DomainAdmin: "{{hostvars[vars[inventory_hostname].parent_host].ansible_user}}@{{vars[vars[inventory_hostname].parent_host].forest_domain}}"
+      SafeModeAdministratorPassword: "{{vars[inventory_hostname].safe_mode_password}}"
+      NewDomainName: "{{vars[inventory_hostname].subdomain}}"
+      NewDomainNetbiosName: "{{vars[inventory_hostname].subdomain_netbios_name}}"
+      ParentDomainName: "{{vars[vars[inventory_hostname].parent_host].forest_domain}}"
+      DatabasePath: "{{vars[inventory_hostname].database_path}}"
+      SysvolPath: "{{vars[inventory_hostname].sysvol_path}}"
+      LogPath: "{{vars[inventory_hostname].log_path}}"
+      ReplicationSourceDC: "{{vars[vars[inventory_hostname].parent_host].hostname}}.{{vars[vars[inventory_hostname].parent_host].forest_domain }}"
+  register:
+    res
+   
+- name: Waiting...
+  pause:
+    minutes: 2
+     
+      
+- name: Waiting for connection
+  ignore_unreachable: true
+  ansible.windows.win_powershell:
+    script: Get-ADDefaultDomainPasswordPolicy
+    error_action: stop
+  register: res
+  until: res is not failed
+  retries: 20
+  delay: 30

@@ -1,0 +1,8 @@
+---
+- name: VM common setups
+  hosts: all
+  roles:
+    - role: roles/common
+  vars_files:
+    - vars/vars.yml
+  

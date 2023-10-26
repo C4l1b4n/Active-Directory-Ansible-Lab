@@ -1,0 +1,30 @@
+---
+dc01:
+  hostname: DC01
+  
+  forest_domain: hacklab.local
+  domain_netbios_name: HACKLAB
+  
+  database_path: C:\Windows\NTDS
+  log_path: C:\Windows\NTDS
+  sysvol_path: C:\Windows\SYSVOL
+  safe_mode_password: Password2!
+
+
+dc02:
+  hostname: DC02
+  
+  parent_host: dc01
+  parent_private_address: 192.168.56.136
+
+  subdomain: corp
+  subdomain_netbios_name: CORP
+  
+  database_path: C:\Windows\NTDS
+  log_path: C:\Windows\NTDS
+  sysvol_path: C:\Windows\SYSVOL
+  safe_mode_password: Password2!
+
+  firstname: Devis
+  lastname: Cook
+  password: cokezero1

@@ -1,0 +1,15 @@
+---
+- name: Create Forest DC
+  hosts: DCs_parent
+  roles:
+    - role: roles/domain_controller_parent
+  vars_files:
+    - vars/vars.yml
+    
+- name: Join Child DC
+  hosts: DCs_child
+  roles:
+    - role: roles/domain_controller_child
+  vars_files:
+    - vars/vars.yml
+  

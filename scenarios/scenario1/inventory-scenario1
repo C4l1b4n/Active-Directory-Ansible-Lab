@@ -1,0 +1,41 @@
+all:
+ hosts:
+   dc01:
+     ansible_host: 192.168.56.136
+     ansible_user: administrator
+     ansible_password: Password1!
+     ansible_connection: psrp
+     ansible_psrp_cert_validation: ignore
+     ansible_psrp_port: 5985
+     ansible_psrp_operation_timeout: 400
+     ansible_psrp_read_timeout: 500
+     ansible_psrp_connection_timeout: 180
+
+   dc02:
+     ansible_host: 192.168.56.133
+     ansible_user: administrator
+     ansible_password: Password1!
+     ansible_connection: psrp
+     ansible_psrp_cert_validation: ignore
+     ansible_psrp_port: 5985
+     ansible_psrp_operation_timeout: 400
+     ansible_psrp_read_timeout: 500
+     ansible_psrp_connection_timeout: 180
+    
+DCs:
+  hosts:
+    dc01:
+    dc02:
+    
+DCs_parent:
+  hosts:
+    dc01:
+    
+DCs_child:
+  hosts:
+    dc02:
+
+RDP:
+  hosts:
+    dc01:
+    dc02:
