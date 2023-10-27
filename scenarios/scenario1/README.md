@@ -32,7 +32,7 @@ The parameters:
 
 need to be configured accordingly.
 
-NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller; to swap the hosts in "DCs_parent" and "DCs_child" groups.
+NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller; to swap the hosts, change "DCs_parent" and "DCs_child" groups.
 
 NOTE: RDP is configured in both hosts. To avoid it remove the hosts from the "RDP" group.
 
