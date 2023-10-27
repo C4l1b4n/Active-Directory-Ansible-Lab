@@ -29,6 +29,7 @@ The parameters:
 * ansible_host: host's address; public address if in a Cloud environment
 * ansible_user: administrator's username
 * ansible_password: administrator's password<br />
+
 need to be configured accordingly.
 
 NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller; to swap the hosts in "DCs_parent" and "DCs_child" groups.
