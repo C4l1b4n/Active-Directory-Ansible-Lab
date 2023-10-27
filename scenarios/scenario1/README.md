@@ -3,7 +3,7 @@
 ![Scenario's map.](images/Scenario1.png)
 
 ## Description
-This laboratory teaches a Forest Privilege Escalation from a Child domain to the Root Domain.
+This laboratory teaches Forest Privilege Escalation from a Child domain to the Root Domain.
 The user starts with a known privileged Domain Admins' account in the Child Domain; the goal is to escalate privileges and achieve Enterprise Admins inside the Forest.
 
 ## Build the hosts
@@ -28,7 +28,7 @@ Copy [scenarios/scenario1/inventory-scenario1](inventory-scenario1) in [ansible-
 The parameters:
 * ansible_host: host's address; public address if in a Cloud environment.
 * ansible_user: administrator's username.
-* ansible_password: administrator's password.
+* ansible_password: administrator's password..<br />
 need to be configured accordingly.
 
 NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller; to swap the hosts in "DCs_parent" and "DCs_child" groups.
