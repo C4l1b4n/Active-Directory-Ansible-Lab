@@ -26,7 +26,7 @@
           )
           C:\Users\Administrator\Desktop\scenario1.ps1 -DomainName $ChildDomain -FirstName $FirstName -LastName $LastName -Password $Password
         parameters:
-          ChildDomain: "{{vars[inventory_hostname].subdomain}}.{{vars[vars[inventory_hostname].parent_host].forest_domain}}"
+          ChildDomain: "{{vars[inventory_hostname].domain}}"
           FirstName: "{{vars[inventory_hostname].firstname}}"
           LastName: "{{vars[inventory_hostname].lastname}}"
           Password: "{{vars[inventory_hostname].password}}"

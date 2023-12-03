@@ -1,0 +1,13 @@
+---
+- name: Create directory structure C:\Program Files\Autologon
+  win_file:
+    path: C:\Program Files\Autologon
+    state: directory
+  when: (vars[inventory_hostname].autologon is defined) and (vars[inventory_hostname].autologon == "yes" or vars[inventory_hostname].autologon == true)
+
+
+- name: Upload Autologon64.exe to C:\Program Files\Autologon
+  win_copy:
+    src: files/Autologon64.exe
+    dest: C:\Program Files\Autologon\autologon.exe
+  when: (vars[inventory_hostname].autologon is defined) and (vars[inventory_hostname].autologon == "yes" or vars[inventory_hostname].autologon == true) 

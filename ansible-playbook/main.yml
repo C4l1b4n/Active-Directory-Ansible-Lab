@@ -6,7 +6,7 @@
 # Install AD environment in target VMs
 - import_playbook: playbook/ad-setup.yml
 
-# Build Forests and Join Domains (if presents)
+# Build Forests, Join Child Domains to Forests, Join Servers to Domains
 - import_playbook: playbook/ad-build.yml
 
 # Install Extra Features
@@ -14,6 +14,7 @@
 
 # Import a Scenario:
 #- import_playbook: playbook/modules/scenario1.yml
+- import_playbook: playbook/modules/custom.yml
 
-# Shutdown all the VMs
+# Shutdown/Reboot all the VMs
 - import_playbook: playbook/shutdown.yml

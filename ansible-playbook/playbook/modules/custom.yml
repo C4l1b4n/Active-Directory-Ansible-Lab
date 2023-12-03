@@ -1,0 +1,25 @@
+---
+- name: Import Custom Scenario
+  hosts: all
+  vars_files:
+    - ../vars/vars.yml
+  tasks:
+
+    - name: Copy configuration script
+      win_copy:
+        src: "{{vars[inventory_hostname].script}}"
+        dest: C:\Users\Administrator\Desktop\{{vars[inventory_hostname].script.split('/')[-1]}}
+      when: (vars[inventory_hostname].script is defined) and (vars[inventory_hostname].script != None)
+       
+    - name: Run configuration script
+      ansible.windows.win_powershell:
+        script: |
+          C:\Users\Administrator\Desktop\{{vars[inventory_hostname].script.split('/')[-1]}}
+      when: (vars[inventory_hostname].script is defined) and (vars[inventory_hostname].script != None)
+        
+    - name: Remove configuration script
+      win_file:
+        path: C:\Users\Administrator\Desktop\{{vars[inventory_hostname].script.split('/')[-1]}}
+        state: absent  
+      when: (vars[inventory_hostname].script is defined) and (vars[inventory_hostname].script != None)      
+      

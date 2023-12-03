@@ -6,3 +6,12 @@
 - name: Reboot
   win_reboot:
   when: res.reboot_required
+  
+- name: Manage sleep/monitor/hibernate options
+  win_shell: | 
+    powercfg /change standby-timeout-ac 0
+    powercfg /change standby-timeout-dc 0 
+    powercfg /change monitor-timeout-ac 0 
+    powercfg /change monitor-timeout-dc 0
+    powercfg /change hibernate-timeout-ac 0
+    powercfg /change hibernate-timeout-dc 0

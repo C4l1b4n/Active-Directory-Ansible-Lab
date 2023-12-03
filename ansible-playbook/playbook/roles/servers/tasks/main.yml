@@ -1,0 +1,18 @@
+- name: Set internal DNS server 
+  win_dns_client:
+    adapter_names: '*'
+    ipv4_addresses:
+      - "{{vars[vars[inventory_hostname].domain_dc_host].private_address}}"
+      
+- name: Join Servers to Domains
+  ansible.windows.win_domain_membership:
+    dns_domain_name: "{{vars[vars[inventory_hostname].domain_dc_host].domain}}"
+    domain_admin_user: "{{hostvars[vars[inventory_hostname].domain_dc_host].ansible_user}}@{{vars[vars[inventory_hostname].domain_dc_host].domain}}"
+    domain_admin_password: "{{hostvars[vars[inventory_hostname].domain_dc_host].ansible_password}}"
+    state: domain
+  register: server_state_reboot
+
+- name: Reboot
+  win_reboot:
+  when: server_state_reboot.reboot_required
+

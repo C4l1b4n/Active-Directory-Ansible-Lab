@@ -1,6 +1,14 @@
 ---
 - name: Install and Configure RDP
-  hosts: RDP
+  hosts: all
   roles:
     - role: roles/rdp
-  
+  vars_files:
+    - vars/vars.yml
+
+- name: Upload Autologon64.exe
+  hosts: all
+  roles:
+    - role: roles/uploads/autologon
+  vars_files:
+    - vars/vars.yml

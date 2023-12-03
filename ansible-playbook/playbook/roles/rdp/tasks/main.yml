@@ -5,13 +5,15 @@
     include_sub_features=yes
     state=present
   register: res
+  when: (vars[inventory_hostname].rdp is defined) and (vars[inventory_hostname].rdp == "yes" or vars[inventory_hostname].rdp == true)
 
 - name: Reboot
   win_reboot:
-  when: res.reboot_required
+  when: (vars[inventory_hostname].rdp is defined) and (vars[inventory_hostname].rdp == "yes" or vars[inventory_hostname].rdp == true) and (res.reboot_required)
   
-- name: Configure RDP Policy
+- name: Configure RDP Group Policy
   win_user_right:
     name: SeRemoteInteractiveLogonRight
     users: BUILTIN\Remote Desktop Users
     action: add
+  when: (vars[inventory_hostname].rdp is defined) and (vars[inventory_hostname].rdp == "yes" or vars[inventory_hostname].rdp == true)

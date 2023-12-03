@@ -1,15 +1,21 @@
 ---
-- name: Create Forest DC
-  hosts: DCs_parent
+- name: Active Directory Forests
+  hosts: DCs_root
   roles:
-    - role: roles/domain_controller_parent
+    - role: roles/domain_root
   vars_files:
     - vars/vars.yml
     
-- name: Join Child DC
+- name: Active Directory Child Domains
   hosts: DCs_child
   roles:
-    - role: roles/domain_controller_child
+    - role: roles/domain_child
   vars_files:
     - vars/vars.yml
-  
+
+- name: Active Directory Servers
+  hosts: Servers
+  roles:
+    - role: roles/servers
+  vars_files:
+    - vars/vars.yml

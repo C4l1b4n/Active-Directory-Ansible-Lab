@@ -1,6 +1,5 @@
 ---
 - name: Install AD environment in DCs
-  hosts: DCs
+  hosts: DCs_root, DCs_child
   roles:
     - role: roles/domain_controller
-  

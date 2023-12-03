@@ -3,7 +3,10 @@
   hosts: all
   tasks:
 
-    - name: Shutdown
+    - name: Reboot
       win_shell: 'shutdown /r /t 10 /f'
+      
+    #- name: Shutdown
+    #  win_shell: 'shutdown /s /t 10 /f'
     
   
