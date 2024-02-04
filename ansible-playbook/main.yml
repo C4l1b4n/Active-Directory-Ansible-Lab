@@ -14,6 +14,7 @@
 
 # Import a Scenario:
 #- import_playbook: playbook/modules/scenario1.yml
+#- import_playbook: playbook/modules/scenario2.yml
 - import_playbook: playbook/modules/custom.yml
 
 # Shutdown/Reboot all the VMs

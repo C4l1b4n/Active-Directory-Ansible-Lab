@@ -1,5 +1,5 @@
 ---
-- name: Import Scenario 1
+- name: Import Scenario 1 - Forest Privilege Escalation
   hosts: dc02
   vars_files:
     - ../vars/vars.yml

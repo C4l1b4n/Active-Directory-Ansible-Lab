@@ -14,7 +14,7 @@ Inside the directory [scenarios](scenarios/), instructions about vulnerable scen
 The playbook provided is highly configurable and it can be used to create:
 * a Domain with a single Domain Controller
 * multiple Domains each with a single Domain Controller
-* a Forest with a Root Domain and multiple Child Domain, each with a Single Domain Controller
+* a Forest with a Root Domain and multiple Child Domains, each with a Single Domain Controller
 * servers in every domain
 
 Different scripts are gonna be run to make the hosts configured/vulnerable, if needed.

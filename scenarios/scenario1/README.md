@@ -21,7 +21,7 @@ Line:
 ```
 - import_playbook: playbook/modules/scenario1.yml
 ```
-The line that imports the custom scenario can be uncommented to make the configuration's process faster.
+The line that imports the custom scenario can be commented to make the configuration's process faster.
 Line:
 ```
 #- import_playbook: playbook/modules/custom.yml
@@ -37,7 +37,7 @@ The parameters:
 
 need to be configured accordingly.
 
-NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller; to swap the hosts, change "DCs_root" and "DCs_child" groups.
+NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller.
 
 
 ### 3 - Configure vars.yml
@@ -57,8 +57,6 @@ Root Domain (default dc01):
 Child Domain (default dc02):
 * hostname: Domain Controller's hostname.
 * private_address: host's private address; it's used to differentiate public and private address if they are different.
-* parent_private_address: parent host's address; private parent's address if in a Cloud environment.
-* root_dc_host: host's name of the domain controller of the Root domain.
 * domain: domain's name.
 * database_path: NTDS's path.
 * log_path: logs' path.

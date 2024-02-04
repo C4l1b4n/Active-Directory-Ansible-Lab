@@ -1,0 +1,47 @@
+---
+dc01:
+  hostname: DC
+  private_address: 192.168.56.136
+  
+  domain: adlab.org
+  
+  database_path: C:\Windows\NTDS
+  log_path: C:\Windows\NTDS
+  sysvol_path: C:\Windows\SYSVOL
+  safe_mode_password: Password2!
+
+
+dc02:
+  hostname: TBBT-DC
+  private_address: 192.168.56.129
+
+  root_dc_host: dc01
+  domain: tbbt.adlab.org
+  
+  database_path: C:\Windows\NTDS
+  log_path: C:\Windows\NTDS
+  sysvol_path: C:\Windows\SYSVOL
+  safe_mode_password: Password2!
+
+
+srv01:
+  hostname: CALTECH
+  
+  domain_dc_host: dc02
+  
+  autologon: yes
+  
+srv02:
+  hostname: HOME
+  
+  domain_dc_host: dc02
+  
+  autologon: yes
+  
+srv03:
+  hostname: TEST
+  
+  domain_dc_host: dc02
+  
+  autologon: yes
+  rdp: yes

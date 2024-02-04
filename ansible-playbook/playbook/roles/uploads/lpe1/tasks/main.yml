@@ -1,0 +1,26 @@
+---
+- name: Upload-#1
+  win_copy:
+    src: files/WiseCare365.exe
+    dest: C:\Users\Administrator\Desktop\WiseCare365.exe
+  
+- name: Upload-#2
+  win_copy:
+    src: files/lpe-setup.ps1
+    dest: C:\Users\Administrator\Desktop\lpe-setup.ps1
+    
+- name: Setup
+  ansible.windows.win_powershell:
+    script: |
+      C:\Users\Administrator\Desktop\lpe-setup.ps1
+  
+- name: Cleanup-#1
+  win_file:
+    path: C:\Users\Administrator\Desktop\WiseCare365.exe
+    state: absent  
+
+- name: Cleanup-#2
+  win_file:
+    path: C:\Users\Administrator\Desktop\lpe-setup.ps1
+    state: absent  
+

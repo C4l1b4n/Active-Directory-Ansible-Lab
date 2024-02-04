@@ -8,6 +8,9 @@ The  supported scenarios are the following.
 ### Scenario 1 - Forest Privilege Escalation
 This laboratory is based on teaching Forest Privilege Escalation from a Child domain to the Root Domain.
 
+### Scenario 2 - CRTP-TBBT#1
+CRTP - Certified Red Teaming Professional simulation environment.
+
 ### Custom Scenario
 This laboratory is based on full custom configuration. Custom scripts are going to be run in the chosen hosts.
 
