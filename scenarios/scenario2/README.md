@@ -1,6 +1,6 @@
 # Scenario 2 - CRTP-TBBT#1
 
-![Scenario's map.](images/Scenario2.png)
+![Scenario's map.](images/Scenario2.jpg)
 
 ## Description
 I made this scenario to simulate a CRTP-like AD environment, using The Big Bang Theory series as universe.
