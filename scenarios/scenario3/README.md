@@ -1,9 +1,9 @@
-# Scenario 2 - CRTP-TBBT#1
+# Scenario 3 - CRTP-TBBT#2
 
-![Scenario's map.](images/Scenario2.png)
+![Scenario's map.](images/Scenario3.png)
 
 ## Description
-I made this scenario to simulate a CRTP-like AD environment, using The Big Bang Theory series as universe.
+I made this scenario to simulate a CRTP-like AD environment, using The Big Bang Theory series as universe, again.
 At the time this playbook was created I hadn't enrolled in the CRTP's course yet.
 Vulnerable path is based on:
 * the course's syllabus
@@ -11,7 +11,7 @@ Vulnerable path is based on:
 * "things" that I wanted to learn how to set up and how to exploit.
 
 ## Goal
-The starting point is the "TEST\testuser" user who can RDP into "TEST" server. His password is "TbbtUser123!".
+The starting point is the "TBBT\test.user" user who can RDP into "TEST" server. His password is "TbbtUser123!".
 From here, the goal is to achieve Enterprise Admins in the forest.
 Inside [solution/SOLUTION.md](solution/SOLUTION.md) more information about the vulnerabilites and an "High Level Solution" can be found.
 
@@ -28,7 +28,7 @@ Step-by-step operations to import the Scenario are the following.
 The line that imports the scenario in [ansible-playbook/main.yml](../../ansible-playbook/main.yml) needs to be uncommented.<br />
 Line: 
 ```
-- import_playbook: playbook/modules/scenario2.yml
+- import_playbook: playbook/modules/scenario3.yml
 ```
 The line that imports the custom scenario can be commented to make the configuration's process faster.
 Line:
@@ -37,7 +37,7 @@ Line:
 ```
 
 ### 2 - Configure inventory
-Copy [scenarios/scenario2/inventory-scenario2](inventory-scenario2) in [ansible-playbook/](../../ansible-playbook/).
+Copy [scenarios/scenario3/inventory-scenario3](inventory-scenario2) in [ansible-playbook/](../../ansible-playbook/).
 
 The parameters:
 * ansible_host: host's address; public address if in a Cloud environment
@@ -50,7 +50,7 @@ NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller.
 
 
 ### 3 - Configure vars.yml
-Copy [scenarios/scenario2/vars.yml](vars.yml) in [ansible-playbook/playbook/vars/](../../ansible-playbook/playbook/vars/).
+Copy [scenarios/scenario3/vars.yml](vars.yml) in [ansible-playbook/playbook/vars/](../../ansible-playbook/playbook/vars/).
 
 Parameters need to be configured accordingly.
 
@@ -66,7 +66,7 @@ NOTE: Parameters that are not specified above should not be modified.
 ## Build the scenario
 ```
 cd ansible-playbook/
-ansible-playbook -i inventory-scenario2 main.yml
+ansible-playbook -i inventory-scenario3 main.yml
 ```
 
 ## Notes

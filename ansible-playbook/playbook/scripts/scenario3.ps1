@@ -1,6 +1,6 @@
 $Global:Users = @('Chuck','Lorre','Leonard','Hofstadter','Sheldon','Cooper','Penny','Hofstadter','Howard','Wolowitz','Rajesh','Koothrappali','Amy','FarrahFowler','Stuart','Bloom','Emily','Sweeney','Bernadette','Wolowitz','President','Siebert');
 $Global:BadPasswords = @('123123', 'baseball', 'abc123', 'football', 'monkey', 'letmein', '696969', 'shadow', 'master', '666666', 'qwertyuiop', '123321', 'mustang', '1234567890', 'michael', '654321', 'pussy', 'superman', '1qaz2wsx', '7777777', 'fuckyou', '121212', '000000', 'qazwsx', '123qwe', 'killer', 'trustno1', 'jordan', 'jennifer', 'zxcvbnm', 'asdfgh', 'hunter', 'buster', 'soccer', 'harley', 'batman', 'andrew', 'tigger', 'sunshine', 'iloveyou', 'fuckme', '2000', 'charlie', 'robert', 'thomas', 'hockey', 'ranger', 'daniel', 'starwars', 'klaster', '112233', 'george', 'asshole', 'computer', 'michelle', 'jessica', 'pepper', '1111', 'zxcvbn', '555555', '11111111', '131313', 'freedom', '777777', 'pass', 'fuck', 'maggie', '159753', 'aaaaaa', 'ginger', 'princess', 'joshua', 'cheese', 'amanda', 'summer', 'love', 'ashley', '6969', 'nicole', 'chelsea', 'biteme', 'matthew', 'access', 'yankees', '987654321', 'dallas', 'austin', 'thunder', 'taylor', 'matrix', 'william', 'corvette', 'hello', 'martin', 'heather', 'secret', 'fucker', 'merlin', 'diamond', '1234qwer', 'gfhjkm', 'hammer', 'silver', '222222', '88888888', 'anthony', 'justin', 'test', 'bailey', 'q1w2e3r4t5', 'patrick', 'internet', 'scooter', 'orange', '11111', 'golfer', 'cookie', 'richard', 'samantha', 'bigdog', 'guitar', 'jackson', 'whatever', 'mickey', 'chicken', 'sparky', 'snoopy', 'maverick', 'phoenix', 'camaro', 'sexy', 'peanut', 'morgan', 'welcome', 'falcon', 'cowboy', 'ferrari', 'samsung', 'andrea', 'smokey', 'steelers', 'joseph', 'mercedes', 'dakota', 'arsenal', 'eagles', 'melissa', 'boomer', 'booboo', 'spider', 'nascar', 'monster', 'tigers', 'yellow', 'xxxxxx', '123123123', 'gateway', 'marina', 'diablo', 'bulldog', 'qwer1234', 'compaq', 'purple', 'hardcore', 'banana', 'junior', 'hannah', '123654', 'porsche', 'lakers', 'iceman', 'money', 'cowboys', '987654', 'london', 'tennis', '999999', 'ncc1701', 'coffee', 'scooby', '0000', 'miller', 'boston', 'q1w2e3r4', 'fuckoff', 'brandon', 'yamaha', 'chester', 'mother', 'forever', 'johnny', 'edward', '333333', 'oliver', 'redsox', 'player', 'nikita', 'knight', 'fender', 'barney', 'midnight', 'please', 'brandy', 'chicago', 'badboy', 'iwantu', 'slayer', 'rangers', 'charles', 'angel', 'flower', 'bigdaddy', 'rabbit', 'wizard', 'bigdick', 'jasper', 'enter', 'rachel', 'chris', 'steven', 'winner', 'adidas', 'victoria', 'natasha', '1q2w3e4r', 'jasmine', 'winter', 'prince', 'panties', 'marine', 'ghbdtn', 'fishing', 'cocacola', 'casper', 'james', '232323', 'raiders', '888888', 'marlboro', 'gandalf', 'asdfasdf', 'crystal', '87654321', '12344321', 'sexsex', 'golden', 'blowme', 'bigtits', '8675309', 'panther', 'lauren', 'angela', 'bitch', 'spanky', 'thx1138', 'angels', 'madison', 'winston', 'shannon', 'mike', 'toyota', 'blowjob', 'jordan23', 'canada', 'sophie', 'Password', 'apples', 'dick', 'tiger', 'razz', '123abc', 'pokemon', 'qazxsw', '55555', 'qwaszx', 'muffin', 'johnson', 'murphy', 'cooper', 'jonathan', 'liverpoo', 'david', 'danielle', '159357', 'jackie', '1990', '123456a', '789456', 'turtle', 'horny', 'abcd1234', 'scorpion', 'qazwsxedc', '101010', 'butter', 'carlos', 'password1', 'dennis', 'slipknot', 'qwerty123', 'booger', 'asdf', '1991', 'black', 'startrek', '12341234', 'cameron', 'newyork', 'rainbow', 'nathan', 'john', '1992', 'rocket', 'viking', 'redskins', 'butthead', 'asdfghjkl', '1212', 'sierra', 'peaches', 'gemini', 'doctor', 'wilson', 'sandra', 'helpme', 'qwertyui', 'victor', 'florida', 'dolphin', 'pookie', 'captain', 'tucker', 'blue', 'liverpool', 'theman', 'bandit', 'dolphins', 'maddog', 'packers', 'jaguar', 'lovers', 'nicholas', 'united', 'tiffany', 'maxwell', 'zzzzzz', 'nirvana', 'jeremy', 'suckit', 'stupid', 'porn', 'monica', 'elephant', 'giants', 'jackass', 'hotdog', 'rosebud', 'success', 'debbie', 'mountain', '444444', 'xxxxxxxx', 'warrior', '1q2w3e4r5t', 'q1w2e3', '123456q', 'albert', 'metallic', 'lucky', 'azerty', '7777', 'shithead', 'alex', 'bond007', 'alexis', '1111111', 'samson', '5150', 'willie', 'scorpio', 'bonnie', 'gators', 'benjamin', 'voodoo', 'driver', 'dexter', '2112', 'jason', 'calvin', 'freddy', '212121', 'creative', '12345a', 'sydney', 'rush2112', '1989', 'asdfghjk', 'red123', 'bubba', '4815162342', 'passw0rd', 'trouble', 'gunner', 'happy', 'fucking', 'gordon', 'legend', 'jessie', 'stella', 'qwert', 'eminem', 'arthur', 'apple', 'nissan', 'bullshit', 'bear', 'america', '1qazxsw2', 'nothing', 'parker', '4444', 'rebecca', 'qweqwe', 'garfield', '01012011', 'beavis', '69696969', 'jack', 'asdasd', 'december', '2222', '102030', '252525', '11223344', 'magic', 'apollo', 'skippy', '315475', 'girls', 'kitten', 'golf', 'copper', 'braves', 'shelby', 'godzilla', 'beaver', 'fred', 'tomcat', 'august', 'buddy', 'airborne', '1993', '1988', 'lifehack', 'qqqqqq', 'brooklyn', 'animal', 'platinum', 'phantom', 'online', 'xavier', 'darkness', 'blink182', 'power', 'fish', 'green', '789456123', 'voyager', 'police', 'travis', '12qwaszx', 'heaven', 'snowball', 'lover', 'abcdef', '00000', 'pakistan', '007007', 'walter', 'playboy', 'blazer', 'cricket', 'sniper', 'hooters', 'donkey', 'willow', 'loveme', 'saturn', 'therock', 'redwings');
-$Global:Groups = @('Caltech Council','Backup Apartment Key','Apartment Key','Scientists','Engineers','University','Cheese Cake Factory','Comics');
+$Global:Groups = @('Local Admins','Domain Managers','Scientists','Engineers','University','Cheese Cake Factory','Comics');
 $Global:BadACL = @('GenericAll','GenericWrite','WriteOwner','WriteDACL','Self','WriteProperty','User-Force-Change-Password');
 $Global:CreatedUsers = @();
 $Global:AllObjects = @();
@@ -54,6 +54,11 @@ function VulnAD-AddADUser {
         $Global:DAUser = $Global:CreatedUsers[0];
 	$Global:DAPassword = ([System.Web.Security.Membership]::GeneratePassword(12,2));
 	Set-AdAccountPassword -Identity $Global:DAUser -Reset -NewPassword (ConvertTo-SecureString $Global:DAPassword -AsPlainText -Force)
+	
+	# Set to penny.hofstadter a bad password
+	$user = "penny.hofstadter"
+	$password = VulnAD-GetRandom -InputList $Global:BadPasswords;
+	Set-AdAccountPassword -Identity $user -Reset -NewPassword (ConvertTo-SecureString $password -AsPlainText -Force)
     }
 
 }
@@ -64,15 +69,14 @@ function VulnAD-AddADGroup {
         Try { New-ADGroup -name $group -GroupScope Global } Catch {}
         }
     $Global:AllObjects += $group;
-    Try { Add-ADGroupMember -Identity $Global:Groups[0] -Members $Global:CreatedUsers[10] } Catch {}
-    Try { Add-ADGroupMember -Identity $Global:Groups[1] -Members $Global:CreatedUsers[3] } Catch {}
-    Try { Add-ADGroupMember -Identity $Global:Groups[2] -Members $Global:CreatedUsers[1],$Global:CreatedUsers[2],$Global:Groups[1] } Catch {}
-    Try { Add-ADGroupMember -Identity $Global:Groups[3] -Members $Global:CreatedUsers[1],$Global:CreatedUsers[2],$Global:CreatedUsers[5],$Global:CreatedUsers[6],$Global:CreatedUsers[9] } Catch {}
-    Try { Add-ADGroupMember -Identity $Global:Groups[4] -Members $Global:CreatedUsers[4] } Catch {}
-    Try { Add-ADGroupMember -Identity $Global:Groups[5] -Members $Global:Groups[3],$Global:Groups[4],$Global:CreatedUsers[10] } Catch {}
-    Try { Add-ADGroupMember -Identity $Global:Groups[6] -Members $Global:CreatedUsers[3] } Catch {}
-    Try { Add-ADGroupMember -Identity $Global:Groups[7] -Members $Global:CreatedUsers[1],$Global:CreatedUsers[2],$Global:CreatedUsers[4],$Global:CreatedUsers[5],$Global:CreatedUsers[7] } Catch {}
+    Try { Add-ADGroupMember -Identity $Global:Groups[0] -Members $Global:CreatedUsers[1],$Global:CreatedUsers[2] } Catch {}
+    Try { Add-ADGroupMember -Identity $Global:Groups[2] -Members $Global:CreatedUsers[1],$Global:CreatedUsers[2],$Global:CreatedUsers[5],$Global:CreatedUsers[6],$Global:CreatedUsers[9] } Catch {}
+    Try { Add-ADGroupMember -Identity $Global:Groups[3] -Members $Global:CreatedUsers[4] } Catch {}
+    Try { Add-ADGroupMember -Identity $Global:Groups[4] -Members $Global:Groups[2],$Global:Groups[3],$Global:CreatedUsers[10] } Catch {}
+    Try { Add-ADGroupMember -Identity $Global:Groups[5] -Members $Global:CreatedUsers[3] } Catch {}
+    Try { Add-ADGroupMember -Identity $Global:Groups[6] -Members $Global:CreatedUsers[1],$Global:CreatedUsers[2],$Global:CreatedUsers[4],$Global:CreatedUsers[5],$Global:CreatedUsers[7] } Catch {}
     Try { Add-ADGroupMember -Identity 'Domain Admins' -Members $Global:CreatedUsers[0] } Catch {}
+    Try { Add-ADGroupMember -Identity 'Account Operators' -Members $Global:CreatedUsers[2] } Catch {}
 }
 
 function VulnAD-AddACL {
@@ -138,26 +142,13 @@ function VulnAD-BadAcls {
 	$Srcobj = Get-ADUser -Identity $srcuser
 	VulnAD-AddACLExtended -Source $Srcobj.sid -Destination $Dstobj.DistinguishedName -Rights $abuse 
         Write-Info "BadACL $abuse $srcuser to $destuser"
-        
         $srcuser = "howard.wolowitz"
         $Srcobj = Get-ADUser -Identity $srcuser
         VulnAD-AddACLExtended -Source $Srcobj.sid -Destination $Dstobj.DistinguishedName -Rights $abuse 
         Write-Info "BadACL $abuse $srcuser to $destuser"
         
         # Self
-        $abuse = "Self"
-	$srcuser = "rajesh.koothrappali"
-	$destgroup = "Backup Apartment Key"
-        $DstGroup = Get-ADGroup -Identity $destgroup
-        $SrcObj= Get-ADUser -Identity $srcuser
-        VulnAD-AddACL -Source $SrcObj.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
-        Write-Info "BadACL $abuse $srcuser to $destgroup"
-        
-        $srcuser = "howard.wolowitz"
-        $SrcObj= Get-ADUser -Identity $srcuser
-        VulnAD-AddACL -Source $SrcObj.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
-        Write-Info "BadACL $abuse $srcuser to $destgroup"
-        
+        $abuse = "Self"        
         $srcuser = "bernadette.wolowitz"
 	$destgroup = "Cheese Cake Factory"
         $DstGroup = Get-ADGroup -Identity $destgroup
@@ -168,16 +159,18 @@ function VulnAD-BadAcls {
 	# WriteOwner
 	$abuse = "WriteOwner"
 	$srcuser = "stuart.bloom"
-	$destgroup = "Apartment Key"
+	$destgroup = "Comics"
         $DstGroup = Get-ADGroup -Identity $destgroup
         $SrcObj= Get-ADUser -Identity $srcuser
         VulnAD-AddACL -Source $SrcObj.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
         Write-Info "BadACL $abuse $srcuser to $destgroup"
         
-        $srcuser = "sheldon.cooper"
+        $srcuser = "penny.hofstadter"
+        $destuser = "stuart.bloom"
+        $Dstobj = Get-ADUser -Identity $destuser
         $SrcObj= Get-ADUser -Identity $srcuser
-        VulnAD-AddACL -Source $SrcObj.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
-        Write-Info "BadACL $abuse $srcuser to $destgroup"
+        VulnAD-AddACL -Source $SrcObj.sid -Destination $Dstobj.DistinguishedName -Rights $abuse
+        Write-Info "BadACL $abuse $srcuser to $destuser"
         
         # WriteProperty
         $abuse = "WriteProperty"
@@ -188,54 +181,70 @@ function VulnAD-BadAcls {
         VulnAD-AddACL -Source $SrcObj.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
         Write-Info "BadACL $abuse $srcuser to $destgroup"
         
-	$srcgroup = "Engineers"
-	$destgroup = "Caltech Council"
-        $DstGroup = Get-ADGroup -Identity $destgroup
-        $SrcGroup = Get-ADGroup -Identity $srcgroup
-        VulnAD-AddACL -Source $SrcGroup.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
-        Write-Info "BadACL $abuse $srcgroup to $destgroup"
+        # WriteDACL
+        $abuse = "WriteDACL"
+	$srcgroup = "Domain Managers"
+	$dest = (Get-ADDomain $Global:Domain)
+        $SrcGroup= Get-ADGroup -Identity $srcgroup
+        VulnAD-AddACL -Source $SrcGroup.sid -Destination $dest.DistinguishedName -Rights $abuse
+        Write-Info "BadACL $abuse $srcgroup to $dest"
         
-        $srcgroup = "Scientists"
-	$destgroup = "Comics"
-	$DstGroup = Get-ADGroup -Identity $destgroup
-        $SrcGroup = Get-ADGroup -Identity $srcgroup
-        VulnAD-AddACL -Source $SrcGroup.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
-        Write-Info "BadACL $abuse $srcgroup to $destgroup"
+        # GenericWrite
+        $abuse = "GenericWrite"
+        $srcuser = "bernadette.wolowitz"
+	$destuser = "penny.hofstadter"
+	$Dstobj = Get-ADUser -Identity $destuser
+	$Srcobj = Get-ADUser -Identity $srcuser
+	VulnAD-AddACL -Source $Srcobj.sid -Destination $Dstobj.DistinguishedName -Rights $abuse 
+        Write-Info "BadACL $abuse $srcuser to $destuser"
+        $destuser = "amy.farrahfowler"
+	$Dstobj = Get-ADUser -Identity $destuser
+	VulnAD-AddACL -Source $Srcobj.sid -Destination $Dstobj.DistinguishedName -Rights $abuse 
+        Write-Info "BadACL $abuse $srcuser to $destuser"
 }
 
 function VulnAD-Kerberoasting {
 	$user = "emily.sweeney"
 	$selected_service = "CLINIC"
 	$selected_service2 = "doctor"
-	$password = VulnAD-GetRandom -InputList $Global:BadPasswords;
-	Set-AdAccountPassword -Identity $user -Reset -NewPassword (ConvertTo-SecureString $password -AsPlainText -Force)
-	Write-Info "Kerberoasting $user $selected_service $password"
+	Write-Info "Fake Kerberoasting $user $selected_service"
 	Try { Set-ADUser -Identity $user -ServicePrincipalNames @{Add="$selected_service/$selected_service2.$Global:Domain"} } Catch {}
     
 	$user = "stuart.bloom"
 	$selected_service = "SHOP"
-	$selected_service2 = "manager"
 	Write-Info "Fake Kerberoasting $user $selected_service"
-	Try { Set-ADUser -Identity $user -ServicePrincipalNames @{Add="$selected_service/$selected_service2.$Global:Domain"} } Catch {}
+	Try { Set-ADUser -Identity $user -ServicePrincipalNames @{Add="$selected_service/$Global:Server1"} } Catch {}
 }
 
-function VulnAD-FakeGPOs {
-	New-GPO -Name "CALTECH - Caltech Council local admin."
-	New-GPO -Name "HOME - Apartment Key local admin."
+function VulnAD-ASREPRoasting {
+	$user = "bernadette.wolowitz"
+	$password = VulnAD-GetRandom -InputList $Global:BadPasswords;
+	Set-AdAccountPassword -Identity $user -Reset -NewPassword (ConvertTo-SecureString $password -AsPlainText -Force)
+	Set-ADAccountControl -Identity $user -DoesNotRequirePreAuth 1
+        Write-Info "AS-REPRoasting $randomuser with password $password"
 }
 
 function VulnAD-Server1 {
 	$secure_da_pwd = ConvertTo-SecureString $Global:DAPassword -AsPlainText -Force
 	$da_cred = New-Object System.Management.Automation.PSCredential("$Global:Domain\$Global:DAUser",$secure_da_pwd)
 	
+	$user = "stuart.bloom"
+	$selected_service = "time"
+	Get-ADUser -Identity $user | Set-ADAccountControl -TrustedToAuthForDelegation $true
+	Set-ADUser -Identity $user -Add @{'msDS-AllowedToDelegateTo'=@("$selected_service/$Global:Server1")}
+	Write-Info "Constrained delegation to $selected_service/$Global:Server1 for $user"
+	
+	Add-Type -AssemblyName System.Web
+	$domain = $Global:Domain
+	$user = "leonard.hofstadter"
+	$generated_password = ([System.Web.Security.Membership]::GeneratePassword(12,2))
+	Set-AdAccountPassword -Identity $user -Reset -NewPassword (ConvertTo-SecureString $generated_password -AsPlainText -Force)
+	
 	Start-Sleep -Seconds 5
 	Invoke-Command -ComputerName $Global:Server1 -Credential $da_cred -ScriptBlock {
-  		net localgroup /add "Administrators" "TBBT\Caltech Council"
+  		net localgroup /add "Administrators" "TBBT\Local Admins"
+  		& "C:\Program Files\Autologon\autologon.exe" /accepteula $Using:user $Using:domain "$Using:generated_password"
 	}
-	
-	schtasks /create /sc minute /mo 5 /ru "$Global:Domain\$Global:DAUser" /rp "$Global:DAPassword" /Tn 'SimpleList' /Tr "powershell.exe -c 'Invoke-Command -Computer $Global:Server1 {dir}'"
-	
-	Get-ADComputer -Identity $Global:Server1 | Set-ADAccountControl -TrustedForDelegation $true
 }
 
 function VulnAD-Server2 {
@@ -244,13 +253,13 @@ function VulnAD-Server2 {
 
 	Add-Type -AssemblyName System.Web
 	$domain = $Global:Domain
-	$user = "howard.wolowitz"
+	$user = "sheldon.cooper"
 	$generated_password = ([System.Web.Security.Membership]::GeneratePassword(12,2))
 	Set-AdAccountPassword -Identity $user -Reset -NewPassword (ConvertTo-SecureString $generated_password -AsPlainText -Force)
 	
 	Start-Sleep -Seconds 5
 	Invoke-Command -ComputerName $Global:Server2 -Credential $da_cred -ScriptBlock {
-		net localgroup /add "Administrators" "TBBT\Apartment Key"
+		net localgroup /add "Administrators" "TBBT\Local Admins"
   		& "C:\Program Files\Autologon\autologon.exe" /accepteula $Using:user $Using:domain "$Using:generated_password"
 	}
 }
@@ -258,16 +267,6 @@ function VulnAD-Server2 {
 function VulnAD-Server3 {
 	$secure_da_pwd = ConvertTo-SecureString $Global:DAPassword -AsPlainText -Force
 	$da_cred = New-Object System.Management.Automation.PSCredential("$Global:Domain\$Global:DAUser",$secure_da_pwd)
-
-	$user = "testuser"
-	$password = "TbbtUser123!"
-	
-	Start-Sleep -Seconds 5
-	Invoke-Command -ComputerName $Global:Server3 -Credential $da_cred -ScriptBlock {
-  		net user /add $Using:user $Using:password
-  		net localgroup /add "ServiceManagers" $Using:user
-  		net localgroup /add "Remote Desktop Users" $Using:user
-	}
 	
 	Add-Type -AssemblyName System.Web
 	$domain = $Global:Domain
@@ -279,6 +278,31 @@ function VulnAD-Server3 {
 	Invoke-Command -ComputerName $Global:Server3 -Credential $da_cred -ScriptBlock {
   		& "C:\Program Files\Autologon\autologon.exe" /accepteula $Using:user $Using:domain "$Using:generated_password"
 	}
+	
+	$user = "TestAdmin"
+	$generated_password = ([System.Web.Security.Membership]::GeneratePassword(12,2))
+	
+	Start-Sleep -Seconds 5
+	Invoke-Command -ComputerName $Global:Server3 -Credential $da_cred -ScriptBlock {
+  		net user /add $Using:user $Using:generated_password
+  		net localgroup /add "Administrators" $Using:user
+  		net localgroup /add "Administrators" "TBBT\Local Admins"
+  		REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AltDefaultUserName /t REG_SZ /d "$Using:user" /f
+		REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AltDefaultPassword /t REG_SZ /d "$Using:generated_password" /f
+	}
+	
+	# Add starting-point User
+	$firstname = "Test";
+        $lastname = "User";
+        $password = "TbbtUser123!";
+        $fullname = "{0} {1}" -f ($firstname , $lastname);
+        $SamAccountName = ("{0}.{1}" -f ($firstname, $lastname)).ToLower();
+        $principalname = "{0}.{1}" -f ($firstname, $lastname);
+        Write-Info "Creating Starting-Point $SamAccountName User with password $password"
+        Try { New-ADUser -Name "$firstname $lastname" -GivenName $firstname -Surname $lastname -SamAccountName $SamAccountName -UserPrincipalName $principalname@$Global:Domain -AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force) -PassThru | Enable-ADAccount } Catch {}
+        Invoke-Command -ComputerName $Global:Server3 -Credential $da_cred -ScriptBlock {
+  		net localgroup /add "Remote Desktop Users" $Using:SamAccountName
+	}  
 }
 
 function VulnAD-DisableSMBSigning {
@@ -287,7 +311,7 @@ function VulnAD-DisableSMBSigning {
 function Invoke-VulnAD {
     ShowBanner
     $Global:Domain = "tbbt.adlab.org"
-    $Global:Server1 = "CALTECH"
+    $Global:Server1 = "SHOP"
     $Global:Server2 = "HOME"
     $Global:Server3 = "TEST"
     
@@ -302,10 +326,10 @@ function Invoke-VulnAD {
     Write-Good "BadACL Done"
     VulnAD-Kerberoasting
     Write-Good "Kerberoasting Done"
+    VulnAD-ASREPRoasting
+    Write-Good "ASREPRoasting Done"
     VulnAD-DisableSMBSigning
     Write-Good "SMB Signing Disabled"
-    VulnAD-FakeGPOs
-    Write-Good "Fake GPOs Created"
     VulnAD-Server1
     Write-Good "Server1 Created"
     VulnAD-Server2

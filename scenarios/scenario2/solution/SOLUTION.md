@@ -39,13 +39,13 @@ This is what you need to perform in order to achieve Enterprise Admins in the fo
 ### HOME Server - Domain Privilege Escalation
 1. TBBT\emily.sweeney (owned) has "User-Force-Change-Password" on TBBT\rajesh.koothrappali.
 2. TBBT\rajesh.koothrappali (owned) has "Self" on "Backup Apartment Key".
-3. "Backup Apartment Key" is nested into "Apartment Key", so TBBT\rajesh.koothrappali is a Local Admin in "HOME" server.
+3. "Backup Apartment Key" is nested into "Apartment Key", so TBBT\rajesh.koothrappali is a local admin in "HOME" server.
 4. POST EXPLOITATION: dump TBBT\howard.wolowitz's NTLM hash.
 
 ### CALTECH Server - Domain Privilege Escalation
 1. TBBT\howard.wolowitz (owned) is part of "Engineers".
-2. "Engineers" has "WritePropety" on "Caltech Council", that is a Local Admin Group in "CALTECH" server.
-4. POST EXPLOITATION: dump TBBT\chuck.lorre's TGT.
+2. "Engineers" has "WriteProperty" on "Caltech Council", that is the local admin group in "CALTECH" server.
+3. POST EXPLOITATION: dump TBBT\chuck.lorre's TGT (Unconstrained Delegation).
 
 ### TBBT-DC - Domain Admins
 1. Inject TBBT\chuck.lorre's TGT in memory, he's a Domain Admin.

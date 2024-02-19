@@ -46,7 +46,7 @@ Parameters need to be configured accordingly.
 
 Root Domain (default dc01):
 * hostname: Domain Controller's hostname.
-* private_address: host's private address; it's used to differentiate public and private address if they are different.
+* private_address: host's private address; it's used to differentiate public and private addresses if they are different.
 * domain: domain's name.
 * database_path: NTDS's path.
 * log_path: logs' path.
@@ -55,7 +55,7 @@ Root Domain (default dc01):
 
 Child Domain (default dc02):
 * hostname: Domain Controller's hostname.
-* private_address: host's private address; it's used to differentiate public and private address if they are different.
+* private_address: host's private address; it's used to differentiate public and private addresses if they are different.
 * root_dc_host: host's name of the domain controller of the Root domain.
 * domain: domain's name.
 * database_path: NTDS's path.

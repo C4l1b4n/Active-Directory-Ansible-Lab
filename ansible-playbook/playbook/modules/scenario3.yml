@@ -1,0 +1,22 @@
+---
+- name: Import Scenario 3 - CRTP-TBBT#2 
+  hosts: dc02
+  vars_files:
+    - ../vars/vars.yml
+  tasks:
+
+    - name: Copy configuration script
+      win_copy:
+        src: ../scripts/scenario3.ps1
+        dest: C:\Users\Administrator\Desktop\scenario3.ps1
+
+       
+    - name: Run configuration script
+      ansible.windows.win_powershell:
+        script: |
+          C:\Users\Administrator\Desktop\scenario3.ps1
+        
+    - name: Remove configuration script
+      win_file:
+        path: C:\Users\Administrator\Desktop\scenario3.ps1
+        state: absent  

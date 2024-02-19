@@ -11,6 +11,9 @@ This laboratory is based on teaching Forest Privilege Escalation from a Child do
 ### Scenario 2 - CRTP-TBBT#1
 CRTP - Certified Red Team Professional simulation environment.
 
+### Scenario 3 - CRTP-TBBT#2
+CRTP - Certified Red Team Professional simulation environment, but different from the previous one!
+
 ### Custom Scenario
 This laboratory is based on full custom configuration. Custom scripts are going to be run in the chosen hosts.
 
