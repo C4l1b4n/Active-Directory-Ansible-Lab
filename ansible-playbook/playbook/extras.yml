@@ -5,7 +5,14 @@
     - role: roles/rdp
   vars_files:
     - vars/vars.yml
-
+    
+- name: Install and Configure ADCS
+  hosts: DCs_root, DCs_child
+  roles:
+    - role: roles/adcs
+  vars_files:
+    - vars/vars.yml
+    
 - name: Upload Autologon64.exe
   hosts: all
   roles:

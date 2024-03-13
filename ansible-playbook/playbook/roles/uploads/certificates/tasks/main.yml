@@ -1,0 +1,25 @@
+---
+- name: Create directory structure
+  win_file:
+    path: C:\certificates
+    state: directory
+
+- name: Upload-#1
+  win_copy:
+    src: files/
+    dest: C:\certificates
+    
+- name: Setup
+  ansible.windows.win_powershell:
+    script: |
+      [CmdletBinding()]
+      param (
+         [String]
+         $Ca_common_name
+      )
+      mkdir 'C:\Program Files\WindowsPowershell\Modules\ADCSTemplate'
+      mv C:\certificates\ADCSTemplate.psd1 'C:\Program Files\WindowsPowershell\Modules\ADCSTemplate\'
+      mv C:\certificates\ADCSTemplate.psm1 'C:\Program Files\WindowsPowershell\Modules\ADCSTemplate\'
+      Install-AdcsCertificationAuthority -CAType EnterpriseRootCA -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -KeyLength 2048 -HashAlgorithmName SHA256 -ValidityPeriod Years -ValidityPeriodUnits 5 -CACommonName $Ca_common_name -Force
+    parameters:
+      Ca_common_name: "{{vars[inventory_hostname].domain.split('.')[0]}}-CA"

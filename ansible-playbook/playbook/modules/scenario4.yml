@@ -1,0 +1,51 @@
+---
+- name: Import Scenario 4 - THEOFFICE 
+  hosts: dc01
+  roles:
+    - role: ../roles/uploads/certificates
+  vars_files:
+    - ../vars/vars.yml
+
+- name: Import Scenario 4 - THEOFFICE 
+  hosts: dc02
+  vars_files:
+    - ../vars/vars.yml
+  tasks:
+
+    - name: Copy configuration script
+      win_copy:
+        src: ../scripts/scenario4-child.ps1
+        dest: C:\Users\Administrator\Desktop\scenario4-child.ps1
+
+       
+    - name: Run configuration script
+      ansible.windows.win_powershell:
+        script: |
+          C:\Users\Administrator\Desktop\scenario4-child.ps1
+        
+    - name: Remove configuration script
+      win_file:
+        path: C:\Users\Administrator\Desktop\scenario4-child.ps1
+        state: absent  
+        
+- name: Import Scenario 4 - THEOFFICE 
+  hosts: dc01
+  vars_files:
+    - ../vars/vars.yml
+  tasks:
+
+    - name: Copy configuration script
+      win_copy:
+        src: ../scripts/scenario4-parent.ps1
+        dest: C:\Users\Administrator\Desktop\scenario4-parent.ps1
+
+       
+    - name: Run configuration script
+      ansible.windows.win_powershell:
+        script: |
+          C:\Users\Administrator\Desktop\scenario4-parent.ps1
+        
+    - name: Remove configuration script
+      win_file:
+        path: C:\Users\Administrator\Desktop\scenario4-parent.ps1
+        state: absent  

@@ -33,7 +33,7 @@ This is what you need to perform in order to achieve Enterprise Admins in the fo
 ### Domain Enumeration:
 1. TBBT\bernadette.wolowitz is ASREPRoastable, her password can be obtained.
 2. TBBT\stuart.bloom is vulnerable to Constrained Delegation ("time/SHOP"'s spn).
-3. The group "Domain Managers" has "Write DACL" on TBBT.ADLAB.ORG.
+3. The "Domain Managers" group has "Write DACL" on TBBT.ADLAB.ORG.
 
 ### SHOP Server - Domain Privilege Escalation
 1. TBBT\bernadette.wolowitz (owned) has "Generic Write" on TBBT\penny.hofstadter.
@@ -43,7 +43,7 @@ This is what you need to perform in order to achieve Enterprise Admins in the fo
 5. POST EXPLOITATION: dump TBBT\leonard.hofstadter's NTLM hash.
 
 ### HOME Server - Domain Privilege Escalation
-1. TBBT\leonard.hofstadter (owned) is part of "Local Admins", and as a consequence, a server's local administrator.
+1. TBBT\leonard.hofstadter (owned) is part of "Local Admins", and as a consequence, he's a server's local administrator.
 2. POST EXPLOITATION: dump TBBT\sheldon.cooper's NTLM hash.
 
 ### TBBT-DC - Domain Admins

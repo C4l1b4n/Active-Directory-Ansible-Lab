@@ -1,17 +1,15 @@
-# Scenario 3 - CRTP-TBBT#2
+# Scenario 4 - THEOFFICE
 
-![Scenario's map.](images/Scenario3.png)
+![Scenario's map.](images/Scenario4.png)
 
 ## Description
-I made this scenario to simulate a CRTP-like AD environment, using The Big Bang Theory series as universe, again.
-At the time this playbook was created I hadn't enrolled in the CRTP's course yet.
+I made this scenario to simulate a different AD environment, using The Office series as universe.
+The main difference between this scenario and the previous ones it's a different layout of the network: one of the servers is part of the parent's domain.
 Vulnerable path is based on:
-* the course's syllabus
-* cheatsheets found online
 * "things" that I wanted to learn how to set up and how to exploit.
 
 ## Goal
-The starting point is the "TBBT\test.user" user who can RDP into "TEST" server. His password is "TbbtUser123!".
+The starting point is the "SCRANTON\camera.man" user who can RDP into "SALES" server. His password is "TheOffice123!".
 From here, the goal is to achieve Enterprise Admins in the forest.
 Inside [solution/SOLUTION.md](solution/SOLUTION.md) more information about the vulnerabilites and an "High Level Solution" can be found.
 
@@ -28,7 +26,7 @@ Step-by-step operations to import the Scenario are the following.
 The line that imports the scenario in [ansible-playbook/main.yml](../../ansible-playbook/main.yml) needs to be uncommented.<br />
 Line: 
 ```
-- import_playbook: playbook/modules/scenario3.yml
+- import_playbook: playbook/modules/scenario4.yml
 ```
 The line that imports the custom scenario can be commented to make the configuration's process faster.
 Line:
@@ -37,7 +35,7 @@ Line:
 ```
 
 ### 2 - Configure inventory
-Copy [scenarios/scenario3/inventory-scenario3](inventory-scenario3) in [ansible-playbook/](../../ansible-playbook/).
+Copy [scenarios/scenario4/inventory-scenario4](inventory-scenario4) in [ansible-playbook/](../../ansible-playbook/).
 
 The parameters:
 * ansible_host: host's address; public address if in a Cloud environment
@@ -47,10 +45,11 @@ The parameters:
 need to be configured accordingly.
 
 NOTE: dc01 is the Root Domain Controller, dc02 is the Child Domain Controller.
+NOTE: srv01 is the root's domain server, srv2 and srv3 are part of the child's domain.
 
 
 ### 3 - Configure vars.yml
-Copy [scenarios/scenario3/vars.yml](vars.yml) in [ansible-playbook/playbook/vars/](../../ansible-playbook/playbook/vars/).
+Copy [scenarios/scenario4/vars.yml](vars.yml) in [ansible-playbook/playbook/vars/](../../ansible-playbook/playbook/vars/).
 
 Parameters need to be configured accordingly.
 
@@ -66,7 +65,7 @@ NOTE: Parameters that are not specified above should not be modified.
 ## Build the scenario
 ```
 cd ansible-playbook/
-ansible-playbook -i inventory-scenario3 main.yml
+ansible-playbook -i inventory-scenario4 main.yml
 ```
 
 ## Notes

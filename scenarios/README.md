@@ -14,6 +14,9 @@ CRTP - Certified Red Team Professional simulation environment.
 ### Scenario 3 - CRTP-TBBT#2
 CRTP - Certified Red Team Professional simulation environment, but different from the previous one!
 
+### Scenario 4 - THEOFFICE
+Active Directory vuln lab, from low-privileged user to Enterprise Admins.
+
 ### Custom Scenario
 This laboratory is based on full custom configuration. Custom scripts are going to be run in the chosen hosts.
 

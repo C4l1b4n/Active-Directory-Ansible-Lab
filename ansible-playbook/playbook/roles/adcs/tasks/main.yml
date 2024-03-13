@@ -1,0 +1,12 @@
+- name: Install ADCS Services
+  win_feature: >
+    name=AD-Certificate,ADCS-Cert-Authority,ADCS-Web-Enrollment
+    include_management_tools=yes
+    include_sub_features=yes
+    state=present
+  register: res
+  when: (vars[inventory_hostname].adcs is defined) and (vars[inventory_hostname].adcs == "yes" or vars[inventory_hostname].adcs == true)
+
+- name: Reboot
+  win_reboot:
+  when: (vars[inventory_hostname].adcs is defined) and (vars[inventory_hostname].adcs == "yes" or vars[inventory_hostname].adcs == true) and (res.reboot_required)
